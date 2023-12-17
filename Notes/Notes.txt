@@ -1,0 +1,21 @@
+1. Intro Page
+
+2. About Page: 
+  Ideas/references for about page that match the current style/layout of the app: 
+   a. https://olaolu.dev/
+  
+   b. For showing previous companies profile in about this site has a good nomination https://brittanychiang.com/
+  
+   c. the above site also has some interesting ideas to show the projects 
+  
+   d. This one has a interesting svg animation that grows/shrinks with scroll.Image should be in the folder https://prashantsani.com/
+   
+   e. Occasionlly building some cool, funny, weird or animated components and create a codepen for them .. which can be used to show in 
+      projects section... check this -> http://riccardozanutta.com/la-francesca
+
+    f. This website has a intresting idea on showing the about description and image section similar to my current portfolio  https://wibe-studio.netlify.app/
+        source Code is here:- https://www.youtube.com/watch?v=Ra1Fsa9YJCk
+
+    g. This website has the perfect use of the horizontall section ... that i am trying to use in this project https://www.youtube.com/watch?v=SPwc3BUp5Vg
+        To showcase the projects section and how each project should look like and how it should animate ... same techstack .... yaay ! 
+          Note: The design of the actual project card may be different but the style and animation can be copied. Cause they look slick af.
