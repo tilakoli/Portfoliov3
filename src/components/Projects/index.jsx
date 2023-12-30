@@ -6,19 +6,19 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const projects = [
     {
-        title: "Salar de Atacama",
+        title: "Picture one",
         src: "salar_de_atacama.jpg"
     },
     {
-        title: "Valle de la luna",
+        title: "Picture two",
         src: "valle_de_la_muerte.jpeg"
     },
     {
-        title: "Miscanti Lake",
+        title: " Picture three",
         src: "miscani_lake.jpeg"
     },
     {
-        title: "Miniques Lagoons",
+        title: " Picture four",
         src: "miniques_lagoon.jpg"
     },
 ]
