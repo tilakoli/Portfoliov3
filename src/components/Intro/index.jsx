@@ -39,6 +39,7 @@ export default function Index() {
                 />
             </div>
             <div className="flex justify-center relative mt-[25vh] md:mt-[35vh] ">
+                {/* how  */}
                 {/* <div ref={introImage} data-scroll data-scroll-speed="0.3" className='brightness-[70%] w-[350px]  h-[475px] absolute'>
                     <Image
                         className='object-cover object-center w-full h-full'
