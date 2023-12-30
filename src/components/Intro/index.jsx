@@ -39,15 +39,15 @@ export default function Index() {
                 />
             </div>
             <div className="flex justify-center relative mt-[25vh] md:mt-[35vh] ">
-                <div ref={introImage} data-scroll data-scroll-speed="0.3" className='brightness-[70%] w-[350px]  h-[475px] absolute'>
+                {/* <div ref={introImage} data-scroll data-scroll-speed="0.3" className='brightness-[70%] w-[350px]  h-[475px] absolute'>
                     <Image
                         className='object-cover object-center w-full h-full'
                         src={'/images/intro.png'}
                         alt="intro image"
                         fill={true} 
-                        priority={true}s
+                        priority={true}
                     />
-                </div>
+                </div> */}
                 <div className="flex gap-3 text-white text-[7vw] z-[3] text-center whitespace-nowrap mt-52 " data-scroll data-scroll-speed="0.7">
                     <IntroDropSection/>
                 </div> 

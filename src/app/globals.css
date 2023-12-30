@@ -63,3 +63,67 @@ body{
 }
 
 
+
+
+/* --------------- */
+
+
+.loaderContainer {
+  width: 100vw;
+  height: 100vh;
+  color: white !important;
+  position: relative;
+  text-align: center;
+}
+
+.loading {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+}
+
+.follow {
+  position: absolute;
+  background-color: #f48049;  
+  /* // #f48049 */
+  height: 2px;
+  witdh: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.progressbar {
+  position: absolute;
+  background-color: #fff;
+  height: 2px;
+  transition: 0.4s ease-out;
+  witdh: 0;
+  left: 0;
+}
+
+.count {
+  position: absolute;
+  font-size: 130px;
+  font-weight: bold;
+  transfrom: translateY(-15px)
+}
+
+/* .loaderContent {
+  height: 100%;
+  width: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  color: white;
+  background-color: black;
+} */
