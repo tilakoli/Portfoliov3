@@ -32,7 +32,6 @@
 
 .column:last-of-type{
     align-items: flex-end;
-    font-size: 1vw;
 }
 
 .projectList{
@@ -46,9 +45,9 @@
     width: 100%;
     color: white;
     text-transform: uppercase;
-    font-size: 3vw;
     border-bottom: 1px solid white;
     display: flex;
+    font-size: 1vw;
     justify-content: flex-end;
 
 }

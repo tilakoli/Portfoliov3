@@ -30,8 +30,9 @@ body{
   margin: 0px;
   padding: 0px;
   margin: 0px;
+  box-sizing: border-box;
   /* background-color: var(--backgroundColor); */
-  background-color: black;
+  /* background-color: black; */
 }
 
 .scroll-section-outer {
@@ -112,18 +113,3 @@ body{
   transfrom: translateY(-15px)
 }
 
-/* .loaderContent {
-  height: 100%;
-  width: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  overflow: hidden;
-  color: white;
-  background-color: black;
-} */

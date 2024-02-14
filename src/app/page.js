@@ -6,12 +6,14 @@ import Intro from '../components/Intro';
 import Description from '../components/Description';
 import Projects from '../components/Projects';
 import ScrollSection from '../components/HorizontalScrollSection';
+import { useTheme } from 'next-themes';
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
+  const {theme, setTheme} = useTheme()
 
   useEffect(() => {
-    const delay = 5500;
+    const delay = .5;
 
     const timer = setTimeout(() => {
       setLoading(false);
@@ -23,25 +25,29 @@ export default function Home() {
 
   return (
     <Suspense fallback={<Loader />}>
-      <main>
+      <button onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>switch theme</button>
+      <Intro />
+      <Description /> 
+      <div className='flex items-center justify-center w-full uppercase '>
+        <Projects />
+      </div>
+     {/*  <main>
         {loading ? (
           <Loader />
         ) : (
-         
           <div>
-            <Intro />
-
-            <Description />
-            <div className=' w-[99%] text-white uppercase flex justify-center items-center'>
+        
+           
+              <div className=' w-[99%] text-white uppercase flex justify-center items-center'>
               <Projects />
             </div>
             <ScrollSection />
             <div className=' w-[99%] h-screen text-white uppercase flex justify-center items-center '>
               Let`s work together
-            </div>
+            </div> 
           </div>
         )}
-      </main>
+      </main>*/}
     </Suspense>
   );
 }

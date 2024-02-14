@@ -3,28 +3,9 @@ import styles from './style.module.css';
 import Image from 'next/image';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-const projects = [
-    {
-        title: "Picture one",
-        src: "salar_de_atacama.jpg"
-    },
-    {
-        title: "Picture two",
-        src: "valle_de_la_muerte.jpeg"
-    },
-    {
-        title: " Picture three",
-        src: "miscani_lake.jpeg"
-    },
-    {
-        title: " Picture four",
-        src: "miniques_lagoon.jpg"
-    },
-]
+import { projects } from '../Constants';
 
 export default function Index() {
-
     const [selectedProject, setSelectedProject] = useState(0);
     const container = useRef(null);
     const imageContainer = useRef(null);
@@ -40,11 +21,12 @@ export default function Index() {
     }, [])
 
     return (
-        <div ref={container} className={styles.projects}>
-            <div className={styles.projectDescription}>
-                <div ref={imageContainer} className={styles.imageContainer}>
+        <div ref={container} className='relative text-white mt-[25vh] p-[10%]'>
+            <div className='flex h-[700px] justify-between gap-[5%]'>
+                <div ref={imageContainer} className='relative h-[70%] w-[40%]'>
                     <Image 
                         src={`/images/${projects[selectedProject].src}`}
+                        // src={'/images/salar_de_atacama.jpg'}
                         fill={true}
                         alt="project image"
                         priority={true}
@@ -54,18 +36,16 @@ export default function Index() {
                     <p>The flora is characterized by the presence of high elevation wetland, as well as yellow straw, broom sedge, tola de agua and tola amaia.</p>
                 </div>
                 <div className={styles.column}>
-                    <p>Some, like the southern viscacha, vicuña and Darwins rhea, are classified as endangered species. Others, such as Andean goose, horned coot, Andean gull, puna tinamou and the three flamingo species inhabiting in Chile (Andean flamingo, Chilean flamingo, and Jamess flamingo) are considered vulnerable.</p>
+                    <p>Some, like the southern viscacha, vicuña and Darwins rhea, are classified as endangered species. Others, such as Andean goose, horned lorem.</p>
                 </div>
             </div>
 
             <div className={styles.projectList}>
-                {
-                    projects.map( (project, index) => {
+                {projects.map( (project, index) => {
                         return <div key={index} onMouseOver={() => {setSelectedProject(index)}} className={styles.projectEl}>
                             <h2>{project.title}</h2>
                         </div>
-                    })
-                }
+                    })}
             </div>
         </div>
     )

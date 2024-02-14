@@ -1,17 +1,37 @@
 import React, {useLayoutEffect, useRef} from "react";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 import gsap from "gsap";
+import { phrases } from "../Constants";
 
-const phrases = [
-  "I'm a 2* yr old Frontend Developer,",
-  "who loves to craft digital wonders by",
-  "transforming designs into web experiences",
-  "and capturing moments as memories",
-];
 
-export default function Index() {
+export default function Description() {
+  const text = useRef(null);
+
+  const AnimatedText = ({children}) => {
+    useLayoutEffect(() => {
+      gsap.registerPlugin(ScrollTrigger);
+      gsap.from(text.current, {
+        scrollTrigger: {
+          trigger: text.current,
+          scrub: true,
+          start: "0px bottom",
+          end: "bottom+=400px bottom",
+        },
+        opacity: 0,
+        left: "-200px",
+        ease: "power3.Out",
+      });
+    }, []);
+  
+    return (
+      <p ref={text} className="relative m-0">
+        {children}
+      </p>
+    );
+  }
+  
   return (
-    <div className="relative text-white text-[3vw] uppercase mt-[270px] mb-[80px] md:mb-0 md:mt-[30vw] ml-[10vw]">
+    <div className="relative text-black dark:text-white text-[3vw] uppercase py-[40px] px-10 bg-cyan-500">
       {phrases.map((phrase, index) => {
         return <AnimatedText key={index}>{phrase}</AnimatedText>;
       })}
@@ -19,27 +39,3 @@ export default function Index() {
   );
 }
 
-function AnimatedText({children}) {
-  const text = useRef(null);
-
-  useLayoutEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.from(text.current, {
-      scrollTrigger: {
-        trigger: text.current,
-        scrub: true,
-        start: "0px bottom",
-        end: "bottom+=400px bottom",
-      },
-      opacity: 0,
-      left: "-230px",
-      ease: "power3.Out",
-    });
-  }, []);
-
-  return (
-    <p ref={text} className="m-0 relative">
-      {children}
-    </p>
-  );
-}

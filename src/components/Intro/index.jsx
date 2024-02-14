@@ -23,24 +23,17 @@ export default function Index() {
         })
 
         timeline
-            .from(background.current, {clipPath: `inset(15%)`})
+            .from(background.current, {
+                // clipPath: `inset(15%)`
+                clipPath: `inset(10% 12% 0 11%)`
+        })
             .to(introImage.current, {height: "200px"}, 0)
     }, [])
 
     return (
-        <div className='relative w-full flex justify-center '>
-            <div className='w-full h-[140vh] absolute brightness-[60%] hidden md:block' ref={background}>
-                <Image 
-                    className='object-cover object-center w-full h-full'
-                    src={'/images/background.jpeg'}
-                    fill={true}
-                    alt="background image"
-                    priority={true}
-                />
-            </div>
-            <div className="flex justify-center relative mt-[25vh] md:mt-[35vh] ">
-                {/* how  */}
-                {/* <div ref={introImage} data-scroll data-scroll-speed="0.3" className='brightness-[70%] w-[350px]  h-[475px] absolute'>
+        <div className='relative flex justify-center w-full h-screen bg-red-400' ref={background}>
+            <div className='flex items-center justify-center object-cover object-center w-full h-full bg-homepage'>
+                <div ref={introImage} data-scroll data-scroll-speed="0.3" className='w-[250px] h-[375px] md:w-[350px] md:h-[475px] absolute'>
                     <Image
                         className='object-cover object-center w-full h-full'
                         src={'/images/intro.png'}
@@ -48,11 +41,14 @@ export default function Index() {
                         fill={true} 
                         priority={true}
                     />
-                </div> */}
-                <div className="flex gap-3 text-white text-[7vw] z-[3] text-center whitespace-nowrap mt-52 " data-scroll data-scroll-speed="0.7">
+                </div>
+                <div className="flex gap-3 text-white text-[7vw] z-[3] text-center whitespace-nowrap " data-scroll data-scroll-speed="0.7">
                     <IntroDropSection/>
                 </div> 
             </div>
+               
         </div>
+       
     )
+    
 }

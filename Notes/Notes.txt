@@ -19,3 +19,5 @@
     g. This website has the perfect use of the horizontall section ... that i am trying to use in this project https://www.youtube.com/watch?v=SPwc3BUp5Vg
         To showcase the projects section and how each project should look like and how it should animate ... same techstack .... yaay ! 
           Note: The design of the actual project card may be different but the style and animation can be copied. Cause they look slick af.
+
+    h. This website has the intresting animation for the similar description text https://www.fraichedesignthinking.com/
