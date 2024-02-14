@@ -28,7 +28,7 @@ export default function Index() {
                         src={`/images/${projects[selectedProject].src}`}
                         // src={'/images/salar_de_atacama.jpg'}
                         fill={true}
-                        alt="project image"
+                        alt="project images"
                         priority={true}
                     />
                 </div>
