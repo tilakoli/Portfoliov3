@@ -3,10 +3,9 @@ import React, { useLayoutEffect, useRef } from 'react'
 import Image from 'next/image';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import IntroDropSection from '../IntroDropSection';
+import { FallingText } from './FallingText';
 
-export default function Index() {
-
+export default function Index({animateText}) {
     const background = useRef(null);
     const introImage = useRef(null);
 
@@ -43,7 +42,7 @@ export default function Index() {
                     />
                 </div>
                 <div className="flex gap-3 text-white text-[7vw] z-[3] text-center whitespace-nowrap " data-scroll data-scroll-speed="0.7">
-                    <IntroDropSection/>
+                    <FallingText animateText={animateText} />
                 </div> 
             </div>
                

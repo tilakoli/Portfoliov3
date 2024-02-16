@@ -42,16 +42,16 @@ function HorizontalScrollSection() {
       the animation should always be two separated refs */}
       <div ref={triggerRef}>
         <div ref={sectionRef} className="scroll-section-inner ">
-          <div className="scroll-section bg-white">
+          <div className="text-black bg-white scroll-section">
             <h3>Section 1</h3>
           </div>
           
-          <div className="scroll-section bg-black ">
+          <div className="text-white bg-black scroll-section ">
             <h3>Section 2</h3>
           </div>
           
-          <div className="scroll-section bg-white ">
-            <h3>Section 3</h3>
+          <div className="text-black bg-white scroll-section ">
+             <h3>Let`s work together</h3>
           </div>
         </div>
       </div>

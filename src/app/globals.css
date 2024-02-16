@@ -31,8 +31,6 @@ body{
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
-  /* background-color: var(--backgroundColor); */
-  /* background-color: black; */
 }
 
 .scroll-section-outer {
@@ -57,14 +55,10 @@ body{
 }
 
 .scroll-section h3 {
-  color: var(--primaryTextColor);
   letter-spacing: var(--headlineMedium);
   font-size: var(--headlineMedium);
   text-transform: uppercase;
 }
-
-
-
 
 /* --------------- */
 

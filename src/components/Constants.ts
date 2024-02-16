@@ -1,4 +1,4 @@
-export const FirstNameNameAnimationConfig = [
+export const FALLING_NAME_ANIMATION_TEXT = [
   {
     label: "T",
     animationDelay: 0.3,

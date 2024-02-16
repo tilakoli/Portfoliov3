@@ -2,11 +2,12 @@
 import React, { useEffect, useState } from 'react';
 import { Suspense } from 'react';
 import Loader from './loading'; 
-import Intro from '../components/Intro';
+import LandingPageIntro from '../components/Intro/LandingPageIntro';
 import Description from '../components/Description';
-import Projects from '../components/Projects';
+import Projects from '../components/Projects/Projects';
 import ScrollSection from '../components/HorizontalScrollSection';
 import { useTheme } from 'next-themes';
+import { FALLING_NAME_ANIMATION_TEXT } from '../components/Constants';
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -26,26 +27,15 @@ export default function Home() {
   return (
     <Suspense fallback={<Loader />}>
       <button onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>switch theme</button>
-      <Intro />
+      <LandingPageIntro animateText={FALLING_NAME_ANIMATION_TEXT} />
       <Description /> 
-      <div className='flex items-center justify-center w-full uppercase '>
-        <Projects />
-      </div>
-     {/*  <main>
+      <Projects />
+      <ScrollSection />
+     {/*  <main>s
         {loading ? (
           <Loader />
         ) : (
-          <div>
-        
-           
-              <div className=' w-[99%] text-white uppercase flex justify-center items-center'>
-              <Projects />
-            </div>
-            <ScrollSection />
-            <div className=' w-[99%] h-screen text-white uppercase flex justify-center items-center '>
-              Let`s work together
-            </div> 
-          </div>
+          <> </>
         )}
       </main>*/}
     </Suspense>
