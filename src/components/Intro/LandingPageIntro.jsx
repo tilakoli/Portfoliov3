@@ -30,7 +30,7 @@ export default function Index({animateText}) {
     }, [])
 
     return (
-        <div className='relative flex justify-center w-full h-screen bg-red-400' ref={background}>
+        <div className='relative flex justify-center w-full h-screen' ref={background}>
             <div className='flex items-center justify-center object-cover object-center w-full h-full bg-homepage'>
                 <div ref={introImage} data-scroll data-scroll-speed="0.3" className='w-[250px] h-[375px] md:w-[350px] md:h-[475px] absolute'>
                     <Image
